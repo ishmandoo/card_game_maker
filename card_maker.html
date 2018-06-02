@@ -1,0 +1,88 @@
+<html>
+<style>
+	body {
+		width: 1210;
+		margin: 0px;
+	}
+
+	.card {
+		width: 300;
+		height: 400;
+		border-style: solid;
+		position: relative;
+		float: left;
+	}
+
+	.card div {
+		position: absolute;
+	}
+</style>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+<script type="text/javascript">
+
+
+	var templates = {
+		template1: {
+			fields: {
+				title: {left:10, top:10, width: 280},
+				text: {left:10, top:50, width: 280, color:"#101010"}
+			}
+		}
+	};
+
+	var cards = [
+		{	
+			fields:{
+				title: "test",
+				text: "test2 test tes fdast tdafda tewq fdasfd afew dfdas fe"
+			},
+			template: "template1"
+		},
+		{	
+			fields:{
+				title: "test2",
+				text: "test2 test tes fdast tdafda tewq fdasfd afew dfdas fe"
+			},
+			template: "template1"
+		}
+	];
+
+	function makeCard(card) {
+		console.log('making card')
+
+		var template = templates[card.template];
+		var fieldNames = Object.keys(template.fields);
+
+		var cardDiv = jQuery('<div/>', {
+		    class: "card"
+		}).appendTo('#cards');
+
+		fieldNames.forEach(function(fieldName){
+			var fieldProps = Object.keys(template.fields[fieldName])
+			var fieldDiv = jQuery('<div/>', {
+			    class: fieldName,
+			    text: card.fields[fieldName]
+			})
+
+			fieldProps.forEach(function(fieldProp) {
+				fieldDiv.css(fieldProp,template.fields[fieldName][fieldProp])
+			})
+
+			fieldDiv.appendTo(cardDiv);
+		});
+
+	}
+
+	$( document ).ready(function() {	
+		cards.forEach(function(card){
+			makeCard(card)
+		})
+	})
+</script>
+<body>
+	<div id="cards"></div>
+</body>
+</html>
