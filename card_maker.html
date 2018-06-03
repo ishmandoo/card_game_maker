@@ -22,10 +22,34 @@
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
 <script type="text/javascript">
-
+	String.prototype.format = function() {
+	  a = this;
+	  for (k in arguments) {
+	    a = a.replace("{" + k + "}", arguments[k])
+	    a = a.replace(/\n/g, "<br />");
+	  }
+	  return a
+	}
 
 	var templates = {
-		template1: {
+		hero: {
+			fields: {
+				name: {left:10, top:10, width: 280},
+				strength: {left:10, top:50, width: 280, color:"#101010", format:"S {0}"},
+				int: {left:10, top:70, width: 280, color:"#101010", format:"I {0}"},
+				luck: {left:10, top:90, width: 280, color:"#101010", format:"L {0}"}
+			}
+		},
+		hazard: {
+			fields: {
+				title: {left:10, top:10, width: 280},
+				strength: {left:10, top:50, width: 280, color:"#101010", format:"S {0}"},
+				int: {left:10, top:70, width: 280, color:"#101010", format:"I {0}"},
+				luck: {left:10, top:90, width: 280, color:"#101010", format:"L {0}"},
+				effect: {left:10, top:300, width: 280, color:"#FF1010", format:"effect: {0}"}
+			}
+		},
+		default: {
 			fields: {
 				title: {left:10, top:10, width: 280},
 				text: {left:10, top:50, width: 280, color:"#101010"}
@@ -36,17 +60,23 @@
 	var cards = [
 		{	
 			fields:{
-				title: "test",
-				text: "test2 test tes fdast tdafda tewq fdasfd afew dfdas fe"
+				name: "Ace Starborn",
+				strength: 7,
+				int: 4,
+				luck: 8
 			},
-			template: "template1"
+			template: "hero"
 		},
 		{	
 			fields:{
-				title: "test2",
-				text: "test2 test tes fdast tdafda tewq fdasfd afew dfdas fe"
+				title: "Fuel Leak",
+				strength: 6,
+				int: 3,
+				luck: 4,
+				effect: "cannot exit"
 			},
-			template: "template1"
+			template: "hazard",
+			copies: 3
 		}
 	];
 
@@ -54,32 +84,57 @@
 		console.log('making card')
 
 		var template = templates[card.template];
-		var fieldNames = Object.keys(template.fields);
+		var fields = template.fields;
 
 		var cardDiv = jQuery('<div/>', {
 		    class: "card"
 		}).appendTo('#cards');
 
-		fieldNames.forEach(function(fieldName){
-			var fieldProps = Object.keys(template.fields[fieldName])
+		
+		for (var fieldName in fields) {
+			var properties = template.fields[fieldName];
+			var data = card.fields[fieldName];
 			var fieldDiv = jQuery('<div/>', {
-			    class: fieldName,
-			    text: card.fields[fieldName]
+			    class: fieldName
 			})
+			fieldDiv.html("{0}");
+			console.log(typeof fieldDiv.text())
+			for (var propertyName in properties) {
+				if (propertyName == "format") {
+					fieldDiv.html(template.fields[fieldName][propertyName]);
+				} else {
+					fieldDiv.css(propertyName,template.fields[fieldName][propertyName])
+				}
+			}
 
-			fieldProps.forEach(function(fieldProp) {
-				fieldDiv.css(fieldProp,template.fields[fieldName][fieldProp])
-			})
+			if (Array.isArray(data)) {
+				fieldDiv.html((fieldDiv.html()).format(...data));
+			} else {
+				fieldDiv.html((fieldDiv.html()).format(data));
+			}
 
 			fieldDiv.appendTo(cardDiv);
-		});
+		}
 
 	}
 
-	$( document ).ready(function() {	
+	function makeDeck(cards) {
 		cards.forEach(function(card){
-			makeCard(card)
+
+			var copies = 1
+			if (card.hasOwnProperty("copies")) {
+				copies = card.copies
+			}
+
+			for(var i=0; i < copies; i++){
+				makeCard(card)
+			}
 		})
+	}
+
+	$( document ).ready(function() {
+		makeDeck(cards)	
+
 	})
 </script>
 <body>
