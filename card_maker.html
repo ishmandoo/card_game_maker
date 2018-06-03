@@ -21,6 +21,8 @@
   src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
+<script src="cards.js"></script>
+<script src="templates.js"></script>
 <script type="text/javascript">
 	String.prototype.format = function() {
 	  a = this;
@@ -30,55 +32,6 @@
 	  }
 	  return a
 	}
-
-	var templates = {
-		hero: {
-			fields: {
-				name: {left:10, top:10, width: 280},
-				strength: {left:10, top:50, width: 280, color:"#101010", format:"S {0}"},
-				int: {left:10, top:70, width: 280, color:"#101010", format:"I {0}"},
-				luck: {left:10, top:90, width: 280, color:"#101010", format:"L {0}"}
-			}
-		},
-		hazard: {
-			fields: {
-				title: {left:10, top:10, width: 280},
-				strength: {left:10, top:50, width: 280, color:"#101010", format:"S {0}"},
-				int: {left:10, top:70, width: 280, color:"#101010", format:"I {0}"},
-				luck: {left:10, top:90, width: 280, color:"#101010", format:"L {0}"},
-				effect: {left:10, top:300, width: 280, color:"#FF1010", format:"effect: {0}"}
-			}
-		},
-		default: {
-			fields: {
-				title: {left:10, top:10, width: 280},
-				text: {left:10, top:50, width: 280, color:"#101010"}
-			}
-		}
-	};
-
-	var cards = [
-		{	
-			fields:{
-				name: "Ace Starborn",
-				strength: 7,
-				int: 4,
-				luck: 8
-			},
-			template: "hero"
-		},
-		{	
-			fields:{
-				title: "Fuel Leak",
-				strength: 6,
-				int: 3,
-				luck: 4,
-				effect: "cannot exit"
-			},
-			template: "hazard",
-			copies: 3
-		}
-	];
 
 	function makeCard(card) {
 		console.log('making card')
