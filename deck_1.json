@@ -1,0 +1,195 @@
+{
+	"cards":[
+		{	
+			"fields":{
+				"name": "A Trail of Blood",
+				"type": "Premonition",
+				"difficulty": 5,
+				"success": "Remove this card from the deck",
+				"failure": "Remove this card from the deck. Add a level 1 hostile to the deck"
+			},
+			"template": "default",
+			"copies": 4
+		},
+		{	
+			"fields":{
+				"name": "Malodorous Odor",
+				"type": "Premonition",
+				"difficulty": 4,
+				"success": "Remove this card from the deck",
+				"failure": "Remove this card from the deck. Add a level 1 hostile to the deck"
+			},
+			"template": "default",
+			"copies": 4
+		},
+		{	
+			"fields":{
+				"name": "A View of the Stars",
+				"type": "Ambient",
+				"effect": "-3 despair"
+			},
+			"template": "default",
+			"copies": 5
+		},
+		{	
+			"fields":{
+				"name": "A Broken Cryochamber",
+				"type": "Ambient",
+				"effect": "+3 despair"	
+			},
+			"template": "default",
+			"copies": 7
+		},
+		{	
+			"fields":{
+				"name": "Fire",
+				"type": "Hazard",
+				"difficulty": 10,
+				"success": "Add a counter",
+				"failure": "+2 despair",
+				"effect": "cannot exit"
+			},
+			"template": "default",
+			"copies": 5
+		},
+		{			
+			"fields":{
+				"name": "Lockbox",
+				"type": "Container",
+				"difficulty": 5,
+				"success": "Draw an equipment card"
+			},
+			"template": "default",
+			"copies": 5
+		},
+		{	
+			"fields":{
+				"name": "A Skittering of Feet",
+				"type": "Premonition",
+				"difficulty": 6,
+				"success": "Remove this card from the deck",
+				"failure": "Add a Level 1 Hostile to the deck. Return this card to the deck."
+			},
+			"template": "default",
+			"copies": 5
+		},
+		{	
+			"fields":{
+				"name": "A disfigured corpse",
+				"type": "Ambient",
+				"effect": "+2 despair"
+			},
+			"template": "default",
+			"copies": 4
+		},
+		{	
+			"fields":{
+				"name": "Human testing charts",
+				"type": "Ambient",
+				"effect": "+1 despair"
+			},
+			"template": "default",
+			"copies": 4
+		},
+		{	
+			"fields":{
+				"name": "An apple",
+				"type": "Ambient",
+				"effect": "-2 despair"
+			},
+			"template": "default",
+			"copies": 1
+		},
+		{	
+			"fields":{
+				"name": "Cryogenic Chamber",
+				"type": "Container",
+				"difficulty": "10",
+				"effect": "Draw a survivor card"
+			},
+			"template": "default",
+			"copies": 3
+		},
+		{	
+			"fields":{
+				"name": "A dissection table",
+				"type": "Ambient",
+				"effect": "+4 Despair"
+			},
+			"template": "default",
+			"copies": 3
+		},
+		{	
+			"fields":{
+				"name": "Foamcor Sprinkler",
+				"type": "System",
+				"condition": "Requires 2 successes to activate",
+				"effect": "+10 against Fire"
+			},
+			"template": "default",
+			"copies": 1
+		},
+		{	
+			"fields":{
+				"name": "BatOp Extinguisher",
+				"type": "Equipment",
+				"effect": "+4 against Fire"
+			},
+			"template": "default",
+			"copies": 5
+		},
+		{	
+			"fields":{
+				"name": "Gas Leak",
+				"type": "Hazard",
+				"difficulty": 7,
+				"condition": "Requires 2 successes to remove",
+				"effect": "Increase all difficulties by 1"
+			},
+			"template": "default",
+			"copies": 4
+		},
+		{	
+			"fields":{
+				"name": "Vacuum Breach",
+				"type": "Hazard",
+				"difficulty": 8,
+				"success": "Remove this card from the deck",
+				"failure": "Add one despair"
+			},
+			"template": "default",
+			"copies": 4
+		},
+		{	
+			"fields":{
+				"name": "Sheared metal hole",
+				"type": "Exit",
+				"success": "May exit"
+			},
+			"template": "default",
+			"copies": 1
+		},
+		{	
+			"fields":{
+				"name": "Locked Door",
+				"type": "Exit",
+				"difficulty": 7,
+				"success": "May Exit"
+			},
+			"template": "default",
+			"copies": 2
+		},
+		{	
+			"fields":{
+				"name": "Collapsed Doorframe",
+				"type": "Exit",
+				"difficulty": 4,
+				"condition": "Requires 2 successes to activate",
+				"success": "May exit"
+				
+			},
+			"template": "default",
+			"copies": 2
+		}
+	]	
+}

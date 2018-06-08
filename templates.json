@@ -1,0 +1,20 @@
+{
+	"survivor": {
+		"fields": {
+			"name": {"left":5, "top":5, "width": 210},
+			"fortitude": {"left":5, "top":60, "width": 210, "color":"#101010", "format":"fortitude: {0}"},
+			"ability": {"left":5, "top":80, "width": 210, "color":"#101010", "format":"ability: {0}"}
+		}
+	},	
+	"default": {
+		"fields": {
+			"name": {"left":5, "top":5, "width": 210},
+			"difficulty": {"left":5, "top":40, "width": 210, "color":"#101010", "format":"diff: {0}"},
+			"condition": {"left":5, "top":60, "width": 210, "color":"#101010", "format":"cond: {0}"},
+			"effect": {"left":5, "top":110, "width": 210, "color":"#101010", "format":"eff: {0}"},
+			"success": {"left":5, "top":160, "width": 210, "color":"#101010", "format":"suc: {0}"},
+			"failure": {"left":5, "top":210, "width": 210, "color":"#101010", "format":"fail: {0}"},
+			"type": {"left":5, "top":270, "width": 210, "color":"#101010", "format":"type: {0}"}
+		}
+	}
+}

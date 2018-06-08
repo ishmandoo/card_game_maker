@@ -1,0 +1,131 @@
+{
+	"cards":[
+		{	
+			"fields":{
+				"name": "Ace Starborn",
+				"fortitude": 2,
+				"ability": "+4 against fire"
+			},
+			"template": "survivor",
+			"copies": 1
+		},
+		{	
+			"fields":{
+				"name": "Mia Okandubu",
+				"fortitude": 1,
+				"ability": "Required successes for system activiation reduced by 1"
+			},
+			"template": "survivor",
+			"copies": 1
+		},
+		{	
+			"fields":{
+				"name": "Hache-Moncour",
+				"fortitude": 1,
+				"ability": "May return to the hand after minor failures (<5) against hostiles"
+			},
+			"template": "survivor",
+			"copies": 1
+		},
+		{	
+			"fields":{
+				"name": "Zampkor",
+				"fortitude": 2,
+				"ability": "+2 against premonitions"
+			},
+			"template": "survivor",
+			"copies": 1
+		},
+		{	
+			"fields":{
+				"name": "Liu Lau",
+				"fortitude": 2,
+				"ability": "+3 against container"
+			},
+			"template": "survivor",
+			"copies": 1
+		},
+		{	
+			"fields":{
+				"name": "Rhialto",
+				"fortitude": 2,
+				"ability": "-1 level of hostiles added to deck (minimum of 1)"
+			},
+			"template": "survivor",
+			"copies": 1
+		},
+		{	
+			"fields":{
+				"name": "Lo",
+				"fortitude": 3,
+				"ability": "+3 when assisting Ko"
+			},
+			"template": "survivor",
+			"copies": 1
+		},
+		{	
+			"fields":{
+				"name": "Ko",
+				"fortitude": 3,
+				"ability": "+3 when assisting Lo"
+			},
+			"template": "survivor",
+			"copies": 1
+		}	,
+		{	
+			"fields":{
+				"name": "Friar Luc",
+				"fortitude": 1,
+				"ability": "-1 despair when successful"
+			},
+			"template": "survivor",
+			"copies": 1
+		}	,
+		{	
+			"fields":{
+				"name": "Lansford Hastings",
+				"fortitude": 3,
+				"ability": "Add a level 1 hostile to the deck on failure"
+			},
+			"template": "survivor",
+			"copies": 1
+		}	,
+		{	
+			"fields":{
+				"name": "Vaugn Braun",
+				"fortitude": 3,
+				"ability": "double the effect of despair"
+			},
+			"template": "survivor",
+			"copies": 1
+		}	,
+		{	
+			"fields":{
+				"name": "Sulla",
+				"fortitude": 1,
+				"ability": "Up to three enemies in play are inactive for one turn "
+			},
+			"template": "survivor",
+			"copies": 1
+		}	,
+		{	
+			"fields":{
+				"name": "Barca",
+				"fortitude": 3,
+				"ability": "n failure, add to deck as difficulty 5 hostile"
+			},
+			"template": "survivor",
+			"copies": 1
+		}	,
+		{	
+			"fields":{
+				"name": "Laika",
+				"fortitude": 2,
+				"ability": "Cannot add hostiles to deck"
+			},
+			"template": "survivor",
+			"copies": 1
+		}		
+	]
+
+}

@@ -1,0 +1,75 @@
+{
+	"cards":[
+		{	
+			"fields":{
+				"name": "Raging Inferno",
+				"type": "Special Hazard",
+				"difficulty": 15,
+				"condition": "Requires 5 successes to remove",
+				"failure": "+2 Despair",
+				"effect": "Cannot exit"
+			},
+			"template": "default",
+			"copies": 1
+		},
+		{	
+			"fields":{
+				"name": "Somethings wrong...",
+				"type": "Global",
+				"effect": "Each player increases Despair by one each turn"
+			},
+			"template": "default",
+			"copies": 1
+		},
+		{	
+			"fields":{
+				"name": "Cryogenic Chamber",
+				"type": "Container",
+				"difficulty": 10,
+				"success": "Draw a survivor"
+			},
+			"template": "default",
+			"copies": 1
+		},
+		{	
+			"fields":{
+				"name": "Shivering Survivor",
+				"type": "Hostile",
+				"difficulty": 0,
+				"success": "On success by 10 or greater, draw a survivor"
+			},
+			"template": "default",
+			"copies": 5
+		},
+		{	
+			"fields":{
+				"name": "Tickler",
+				"type": "Hostile",
+				"difficulty": 0,
+				"effect": "Add a counter. On three counters, add a Level 1 Hostile to the deck."
+			},
+			"template": "default",
+			"copies": 10
+		},
+		{	
+			"fields":{
+				"name": "Hobgoblin",
+				"type": "Hostile",
+				"difficulty": 2,
+				"effect": "Add a counter. On three counters, add a Level 1 Hostile to the deck."
+			},
+			"template": "default",
+			"copies": 3
+		},
+		{	
+			"fields":{
+				"name": "Screecher",
+				"type": "Hostile",
+				"difficulty": 2,
+				"effect": "Cannot be killed by an unassisted survivor"
+			},
+			"template": "default",
+			"copies": 2
+		}
+	]	
+}
