@@ -1,8 +1,10 @@
 <html>
 <style>
-	body {
+	.deck {
 		width: 2250;
 		margin: 0px;
+		clear: left;
+		overflow: hidden;
 	}
 
 	.card {
@@ -18,7 +20,7 @@
 	}
 
 	div.name {
-		font-size: 18pt
+		font-size: 16pt
 	}
 
 	div {
@@ -29,10 +31,8 @@
   src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
+<script src="papaparse.js"></script>
 <script src="html2canvas.js"></script>
-<script src="dom-to-image.js" />
-<script src="cards.js"></script>
-<script src="templates.js"></script>
 <script type="text/javascript">
 	String.prototype.format = function() {
 	  a = this;
@@ -44,25 +44,28 @@
 	}
 
 
-	function makeCard(card, templates) {
+	function makeCard(card, templates, deckDiv) {
 		console.log('making card')
 
 		var template = templates[card.template];
-		var fields = card.fields;
+		var fields = template.fields;
 
 		var cardDiv = jQuery('<div/>', {
 		    class: "card"
-		}).appendTo('#cards');
+		}).appendTo(deckDiv);
 
 		
 		for (var fieldName in fields) {
 			var properties = template.fields[fieldName];
-			var data = card.fields[fieldName];
+
+			var data = card.fields.data;			
+			if (fieldName == "name"){
+				data = card.fields.name
+			}
 			var fieldDiv = jQuery('<div/>', {
 			    class: fieldName
 			})
 			fieldDiv.html("{0}");
-			console.log(typeof fieldDiv.text())
 			for (var propertyName in properties) {
 				if (propertyName == "format") {
 					fieldDiv.html(template.fields[fieldName][propertyName]);
@@ -82,7 +85,16 @@
 
 	}
 
-	function makeDeck(cards, templates) {
+	function makeDeck(cards, templates, name) {
+
+		var deckDiv = jQuery('<div/>', {
+		    class: "deck",
+		    id: name
+		}).appendTo('#decks');
+
+		jQuery('<br>').appendTo('#decks')
+		var count = 0
+
 		cards.forEach(function(card){
 
 			var copies = 1
@@ -91,13 +103,62 @@
 			}
 
 			for(var i=0; i < copies; i++){
-				makeCard(card, templates)
+				count += 1;
+				makeCard(card, templates, deckDiv);
 			}
-		})
+		});
+
+		console.log(deckDiv[0])
+		console.log(document.body)
+		html2canvas(deckDiv[0]).then(function(canvas) {
+
+			var a = document.createElement('a');
+			a.href = canvas.toDataURL("image/jpeg").replace("image/jpeg", "image/octet-stream");
+			a.download =  name + '_' + count + '.jpg';
+			a.click();
+		});
+
+
 	}
 
 	$( document ).ready(function() {
 
+  		$.ajaxSetup({ cache: false });
+		console.log("fetching templates")
+		$.getJSON("templates.json", function(templates) {
+			console.log("templates", templates);
+			Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vToEnxvYcSklDI89s-C7v2AjAtSyIw_InKBLI6hlYuZHtCV77qvyZ8qETrCGFqTAY5Ei8mxp12jeQWf/pub?output=csv"+"&bust="+ (new Date).getTime(), {
+				download: true,
+				complete: function(results) {
+					console.log(results)
+					decks = {}
+					results.data.slice(1).forEach(function(card) {
+						if (!(card[1] in decks)) {
+							decks[card[1]] = [];
+						}
+
+						decks[card[1]].push({
+							fields: {
+								name: card[0],
+								data: card.slice(4)
+							},
+							copies: card[3],
+							template: card[2]
+						});
+					});
+
+					console.log(decks);
+					for (var deck in decks) {
+						console.log("making deck " + deck)
+						makeDeck(decks[deck], templates, deck);
+					}
+				}
+			});
+
+			
+		});
+
+/*
 		console.log("fetching cards")
 		$.getJSON("starter_cards.json", function(cards) {
 			cards = cards.cards;
@@ -119,9 +180,10 @@
 				});
 			});
 		});
+		*/
 	});
 </script>
 <body>
-	<div id="cards"></div>
+	<div id="decks"></div>
 </body>
 </html>
