@@ -45,7 +45,9 @@
 
 
 	function makeCard(card, templates, deckDiv) {
-		console.log('making card')
+		console.log('making card ', card.fields.name)
+
+		console.log(card.template)
 
 		var template = templates[card.template];
 		var fields = template.fields;
