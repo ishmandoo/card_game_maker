@@ -1,24 +1,17 @@
 {	
-	"default": {
-		"fields": {
-			"name": {"left":5, "top":5, "width": 210},
-			"data": {"left":5, "top":40, "width": 210, "color":"#101010", "format":"diff: {1}\n{1}\n{2}"},
-			"type": {"left":5, "top":5, "width": 210, "format":"{0}"}
-		}
-	},
-	"survivor": {
-		"fields": {
-			"name": {"left":5, "top":5, "width": 200},
-			"fortitude": {"left":200, "top":5, "width": 200, "format":"{1}"},
-			"data": {"left":5, "top":40, "width": 210, "color":"#101010", "format":"<b>ability:</b> {2}"},
-			"type": {"left":5, "top":270, "width": 210, "format":"{0}"}
-		}
-	},
-	"premonition": {
+	"system": {
 		"fields": {
 			"name": {"left":5, "top":5, "width": 200},
 			"difficulty": {"left":200, "top":5, "width": 200, "format":"{1}"},
-			"data": {"left":5, "top":40, "width": 210, "color":"#101010", "format":"<b>success:</b> {2}\n<b>failure:</b> {3}"},
+			"data": {"left":5, "top":50, "width": 210, "color":"#101010", "format":"{2}"},
+			"type": {"left":5, "top":270, "width": 210, "format":"{0}"}
+		}
+	},
+	"enemy": {
+		"fields": {
+			"name": {"left":5, "top":5, "width": 200},
+			"difficulty": {"left":200, "top":5, "width": 200, "format":"{1}"},
+			"data": {"left":5, "top":50, "width": 210, "color":"#101010", "format":"{2}\n{3}\n{4}"},
 			"type": {"left":5, "top":270, "width": 210, "format":"{0}"}
 		}
 	},
@@ -26,70 +19,23 @@
 		"fields": {
 			"name": {"left":5, "top":5, "width": 200},
 			"difficulty": {"left":200, "top":5, "width": 200, "format":"{1}"},
-			"data": {"left":5, "top":40, "width": 210, "color":"#101010", "format":"<b>effect:</b> {2}\n<b>removal:</b> {3}\n<b>success:</b> {4}\n<b>failure:</b> {5}"},
+			"data": {"left":5, "top":50, "width": 210, "color":"#101010", "format":"{2}\n{3}\n{4}"},
 			"type": {"left":5, "top":270, "width": 210, "format":"{0}"}
 		}
 	},
-	"ambient": {
-		"fields": {
-			"name": {"left":5, "top":5, "width": 200},
-			"data": {"left":5, "top":40, "width": 210, "color":"#101010", "format":"<b>effect:</b> {1}"},
-			"type": {"left":5, "top":270, "width": 210, "format":"{0}"}
-		}
-	},
-	"exit": {
+	"item": {
 		"fields": {
 			"name": {"left":5, "top":5, "width": 200},
 			"difficulty": {"left":200, "top":5, "width": 200, "format":"{1}"},
-			"data": {"left":5, "top":40, "width": 210, "color":"#101010", "format":"<b>effect:</b> {2}\n<b>removal:</b> {3}\n<b>success:</b> {4}\n<b>failure:</b> {5}"},
+			"data": {"left":5, "top":50, "width": 210, "color":"#101010", "format":"{2}\n{3}\n{4}"},
 			"type": {"left":5, "top":270, "width": 210, "format":"{0}"}
 		}
 	},
-	"container": {
+	"special": {
 		"fields": {
 			"name": {"left":5, "top":5, "width": 200},
 			"difficulty": {"left":200, "top":5, "width": 200, "format":"{1}"},
-			"data": {"left":5, "top":40, "width": 210, "color":"#101010", "format":"<b>success:</b> {2}"},
-			"type": {"left":5, "top":270, "width": 210, "format":"{0}"}
-		}
-	},
-	"system": {
-		"fields": {
-			"name": {"left":5, "top":5, "width": 200},
-			"difficulty": {"left":200, "top":5, "width": 200, "format":"{1}"},
-			"data": {"left":5, "top":40, "width": 210, "color":"#101010", "format":"<b>success:</b> {1}"},
-			"type": {"left":5, "top":270, "width": 210, "format":"{0}"}
-		}
-	},
-	"equipment": {
-		"fields": {
-			"name": {"left":5, "top":5, "width": 200},
-			"difficulty": {"left":200, "top":5, "width": 200, "format":"{1}"},
-			"data": {"left":5, "top":40, "width": 210, "color":"#101010", "format":"<b>effect:</b> {2}"},
-			"type": {"left":5, "top":270, "width": 210, "format":"{0}"}
-		}
-	},
-	"hostile": {
-		"fields": {
-			"name": {"left":5, "top":5, "width": 200},
-			"difficulty": {"left":200, "top":5, "width": 200, "format":"{1}"},
-			"data": {"left":5, "top":40, "width": 210, "color":"#101010", "format":"<b>effect:</b> {2}\n<b>removal:</b> {3}\n<b>success:</b> {4}\n<b>failure:</b> {5}"},
-			"type": {"left":5, "top":270, "width": 210, "format":"{0}"}
-		}
-	},
-	"story": {
-		"fields": {
-			"name": {"left":5, "top":5, "width": 200},
-			"difficulty": {"left":200, "top":5, "width": 200, "format":"{1}"},
-			"data": {"left":5, "top":40, "width": 210, "color":"#101010", "format":"<b>effect:</b> {2}\n<b>removal:</b> {3}\n<b>success:</b> {4}\n<b>failure:</b> {5}"},
-			"type": {"left":5, "top":270, "width": 210, "format":"{0}"}
-		}
-	},
-	"discovery": {
-		"fields": {
-			"name": {"left":5, "top":5, "width": 200},
-			"difficulty": {"left":200, "top":5, "width": 200, "format":"{1}"},
-			"data": {"left":5, "top":40, "width": 210, "color":"#101010", "format":"<b>effect:</b> {2}\n<b>removal:</b> {3}\n<b>success:</b> {4}\n<b>failure:</b> {5}"},
+			"data": {"left":5, "top":50, "width": 210, "color":"#101010", "format":"{2}\n{3}\n{4}"},
 			"type": {"left":5, "top":270, "width": 210, "format":"{0}"}
 		}
 	}

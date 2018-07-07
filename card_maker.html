@@ -8,7 +8,7 @@
 	}
 
 	.card {
-		width: 218;
+		width: 219;
 		height: 294;
 		border-style: solid;
 		position: relative;
@@ -50,6 +50,7 @@
 		console.log(card.template)
 
 		var template = templates[card.template];
+		console.log(template)
 		var fields = template.fields;
 
 		var cardDiv = jQuery('<div/>', {
@@ -129,7 +130,7 @@
 		console.log("fetching templates")
 		$.getJSON("templates.json", function(templates) {
 			console.log("templates", templates);
-			Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vToEnxvYcSklDI89s-C7v2AjAtSyIw_InKBLI6hlYuZHtCV77qvyZ8qETrCGFqTAY5Ei8mxp12jeQWf/pub?output=csv"+"&bust="+ (new Date).getTime(), {
+			Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vRUFVchvd30vNnaVsGjod3u3wgd88McwZz13vVrekYLNqNWpJmU8mHoX22Sv0AJ73X6i4gSZsRfQkI6/pub?output=csv"+"&bust="+ (new Date).getTime(), {
 				download: true,
 				complete: function(results) {
 					console.log(results)
