@@ -1,0 +1,46 @@
+{	
+	"system": {
+		"fields": {
+			"name": {"left":5, "top":5, "width": 225},
+			"difficulty": {"left":225, "top":5, "width": 225, "format":"{1}"},
+			"data": {"left":5, "top":60, "width": 225, "color":"#101010", "format":"<b>unpowered:</b> {2}\n<b>powered:</b> {3}"},
+			"type": {"left":5, "top":320, "width": 225, "format":"{0}"}
+		}
+	},
+	"enemy": {
+		"fields": {
+			"name": {"left":5, "top":5, "width": 225},
+			"difficulty": {"left":225, "top":5, "width": 225, "format":"{1}"},
+			"data": {"left":5, "top":50, "width": 225, "color":"#101010", "format":"{2}\n\n{3}"},
+			"type": {"left":5, "top":320, "width": 225, "format":"{0}"}
+		}
+	},
+	"hazard": {
+		"fields": {
+			"name": {"left":5, "top":5, "width": 225},
+			"difficulty": {"left":225, "top":5, "width": 225, "format":"{1}"},
+			"data": {"left":5, "top":50, "width": 225, "color":"#101010", "format":"{2}"},
+			"type": {"left":5, "top":320, "width": 225, "format":"{0}"}
+		}
+	},
+	"item": {
+		"fields": {
+			"name": {"left":5, "top":5, "width": 225},
+			"difficulty": {"left":225, "top":5, "width": 225, "format":"{1}"},
+			"data": {"left":5, "top":50, "width": 225, "color":"#101010", "format":"{2}\n{3}\n{4}"},
+			"type": {"left":5, "top":320, "width": 225, "format":"{0}"}
+		}
+	},
+	"special": {
+		"fields": {
+			"name": {"left":5, "top":5, "width": 225},
+			"data": {"left":5, "top":50, "width": 225, "color":"#101010", "format":"{0}"}
+		}
+	},
+	"token": {
+		"fields": {
+			"name": {"left":5, "top":5, "width": 225},
+			"data": {"left":5, "top":50, "width": 225, "color":"#101010", "format":"{0}"}
+		}
+	}
+}
