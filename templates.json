@@ -1,46 +1,58 @@
 {	
-	"system": {
+	"juror": {
+		"image": "juror.png",
+		"fields": {
+			"name": {"left":5, "top":50, "width": 750},
+			"logic": {"left":90, "top":950, "width": 100, "color":"#101010", "format":"{1}"},
+			"sympathy": {"left":330, "top":950, "width": 100, "color":"#101010", "format":"{2}"},
+			"threat": {"left":570, "top":950, "width": 100, "color":"#101010", "format":"{3}"}
+		}
+	},
+	"judge": {
+		"image": "judge.png",
+		"fields": {
+			"name": {"left":5, "top":50, "width": 750, "font-size": 34},
+			"logic": {"left":550, "top":760, "width": 100, "color":"#101010", "format":"{1}", "font-size": 200},
+			"sympathy": {"left":180, "top":700, "width": 100, "color":"#101010", "format":"{2}", "font-size": 150},
+			"threat": {"left":180, "top":890, "width": 100, "color":"#101010", "format":"{3}", "font-size": 150}
+		}
+	},
+	"threat": {
+		"image": "threat.png",
+		"fields": {
+			"name": {"left":5, "top":50, "width": 750, "font-size": 34},
+			"threat": {"left":680, "top":40, "width": 100, "format":"{1}", "font-size": 70, "text-align": "left"},
+			"data": {"left":100, "top":400, "width": 600, "color":"#101010", "format":"{2}", "font-size": 60}
+		}
+	},
+	"sympathy": {
+		"image": "sympathy.png",
+		"fields": {
+			"name": {"left":5, "top":50, "width": 750, "font-size": 38},
+			"data": {"left":260, "top":430, "width": 100, "color":"#101010", "format":"{1}", "font-size": 400}
+		}
+	},
+	"logic": {
+		"image": "logic.png",
+		"fields": {
+			"name": {"left":5, "top":50, "width": 750, "font-size": 38},
+			"data": {"left":270, "top":430, "width": 100, "color":"#101010", "format":"{1}", "font-size": 400}
+		}
+	},
+	"fragment": {
+		"image": "juror.png",
 		"fields": {
 			"name": {"left":5, "top":5, "width": 225},
-			"difficulty": {"left":225, "top":5, "width": 225, "format":"{1}"},
-			"data": {"left":5, "top":60, "width": 225, "color":"#101010", "format":"<b>unpowered:</b> {2}\n<b>powered:</b> {3}"},
+			"data": {"left":5, "top":125, "width": 225, "color":"#101010", "format":"{1}"},
 			"type": {"left":5, "top":320, "width": 225, "format":"{0}"}
 		}
 	},
-	"enemy": {
+	"client": {
+		"image": "juror.png",
 		"fields": {
 			"name": {"left":5, "top":5, "width": 225},
-			"difficulty": {"left":225, "top":5, "width": 225, "format":"{1}"},
-			"data": {"left":5, "top":50, "width": 225, "color":"#101010", "format":"{2}\n\n{3}"},
+			"data": {"left":5, "top":125, "width": 225, "color":"#101010", "format":"{1}"},
 			"type": {"left":5, "top":320, "width": 225, "format":"{0}"}
-		}
-	},
-	"hazard": {
-		"fields": {
-			"name": {"left":5, "top":5, "width": 225},
-			"difficulty": {"left":225, "top":5, "width": 225, "format":"{1}"},
-			"data": {"left":5, "top":50, "width": 225, "color":"#101010", "format":"{2}"},
-			"type": {"left":5, "top":320, "width": 225, "format":"{0}"}
-		}
-	},
-	"item": {
-		"fields": {
-			"name": {"left":5, "top":5, "width": 225},
-			"difficulty": {"left":225, "top":5, "width": 225, "format":"{1}"},
-			"data": {"left":5, "top":50, "width": 225, "color":"#101010", "format":"{2}\n{3}\n{4}"},
-			"type": {"left":5, "top":320, "width": 225, "format":"{0}"}
-		}
-	},
-	"special": {
-		"fields": {
-			"name": {"left":5, "top":5, "width": 225},
-			"data": {"left":5, "top":50, "width": 225, "color":"#101010", "format":"{0}"}
-		}
-	},
-	"token": {
-		"fields": {
-			"name": {"left":5, "top":5, "width": 225},
-			"data": {"left":5, "top":50, "width": 225, "color":"#101010", "format":"{0}"}
 		}
 	}
 }

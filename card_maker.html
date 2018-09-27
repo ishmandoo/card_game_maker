@@ -1,15 +1,21 @@
 <html>
 <style>
+
+	@font-face {
+	    font-family: 'outage'; /*a name to be used later*/
+	    src: url('fonts/Outage.ttf'); /*URL to font*/
+	}
+
 	.deck {
-		width: 2500;
+		width: 7500;
 		margin: 0px;
 		clear: left;
 		overflow: hidden;
 	}
 
 	.card {
-		width: 250;
-		height: 350;
+		min-width: 250;
+		min-height: 350;
 		position: relative;
 		float: left;
 	}
@@ -19,11 +25,15 @@
 	}
 
 	div.name {
-		font-size: 18pt
+		font-size: 36pt;
+		font-family:"outage";
+		text-align: left;
 	}
 
 	div {
-		font-size: 15pt
+		font-size: 80pt;
+		font-family:"outage";
+		text-align: center;
 	}
 </style>
 <script
@@ -55,6 +65,8 @@
 		var cardDiv = jQuery('<div/>', {
 		    class: "card"
 		}).appendTo(deckDiv);
+
+		$('<img src="images/' + template.image + '">').appendTo(cardDiv);
 
 		
 		for (var fieldName in fields) {
@@ -129,7 +141,7 @@
 		console.log("fetching templates")
 		$.getJSON("templates.json", function(templates) {
 			console.log("templates", templates);
-			Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vRUFVchvd30vNnaVsGjod3u3wgd88McwZz13vVrekYLNqNWpJmU8mHoX22Sv0AJ73X6i4gSZsRfQkI6/pub?output=csv"+"&bust="+ (new Date).getTime(), {
+			Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vRBZvWFxYCsz6KK2D2Z5AzMNEoT0JSYpPSOZ3Eoa6G1750OnZToas2hFU0CoHKcM4AwcWo0LbMQZSmy/pub?gid=1704731480&single=true&output=csv"+"&bust="+ (new Date).getTime(), {
 				download: true,
 				complete: function(results) {
 					console.log(results)
