@@ -12,10 +12,12 @@
 		"image": "judge.png",
 		"fields": {
 			"name": {"left":5, "top":50, "width": 750, "font-size": 34},
-			"logic": {"left":550, "top":760, "width": 100, "color":"#101010", "format":"{1}", "font-size": 200},
-			"sympathy": {"left":180, "top":700, "width": 100, "color":"#101010", "format":"{2}", "font-size": 150},
-			"threat": {"left":180, "top":890, "width": 100, "color":"#101010", "format":"{3}", "font-size": 150}
-		}
+			"logic": {"left":550, "top":760, "width": 100, "color":"#101010", "format":"{1}", "font-size": 200}
+		},
+		"faders": [
+			{"index": 3, "image": "fist.png", "tops":[880, 940, 880, 940, 880, 940, 880, 940, 880, 940], "lefts":[20, 55, 100, 135 ,180, 215, 260, 295, 340, 375, 420]},
+			{"index": 2, "image": "heart.png", "tops":[700, 700, 700, 700, 700], "lefts":[20, 105, 190, 275, 360]}
+		]
 	},
 	"threat": {
 		"image": "threat.png",

@@ -2,8 +2,20 @@
 <style>
 
 	@font-face {
-	    font-family: 'outage'; /*a name to be used later*/
-	    src: url('fonts/Outage.ttf'); /*URL to font*/
+	    font-family: 'outage';
+	    src: url('fonts/Outage.ttf');
+	}
+
+	.bg {
+		position: relative;
+	}
+
+	.icon {
+		position: absolute;
+	}
+
+	.faded {
+		opacity: 0.5;
 	}
 
 	.deck {
@@ -66,7 +78,24 @@
 		    class: "card"
 		}).appendTo(deckDiv);
 
-		$('<img src="images/' + template.image + '">').appendTo(cardDiv);
+		$('<img class="bg", src="images/' + template.image + '">').appendTo(cardDiv);
+		
+		if (template.faders) {
+			for (var i = 0; i < template.faders.length; i++) {
+				var fader = template.faders[i];
+				for (var j = 0; j < fader.tops.length; j++) {
+					var tops = fader.tops;
+					var lefts = fader.lefts;
+					var value = card.fields.data[fader.index];
+					var opacity = 1.;
+					if (j >= value ) {
+						var opacity = 0.4;
+					}
+					$('<img class="icon", src="images/' + fader.image + '", style="top:'+ tops[j] + '; left:' + lefts[j] + ';opacity:' + opacity +';">').appendTo(cardDiv);
+				}
+			}
+
+		}
 
 		
 		for (var fieldName in fields) {
