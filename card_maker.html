@@ -16,6 +16,8 @@
 	
 	.portrait {
 		position: absolute;
+		left: 100px;
+		top: 100px;
 	}
 
 	.faded {
@@ -156,9 +158,8 @@
 				makeCard(card, templates, deckDiv);
 			}
 		});
-
-		console.log(deckDiv[0])
-		console.log(document.body)
+		
+		/* NO DOWNLOAD
 		html2canvas(deckDiv[0]).then(function(canvas) {
 
 			var a = document.createElement('a');
@@ -166,7 +167,7 @@
 			a.download =  name + '_' + count + '.jpg';
 			a.click();
 		});
-
+		*/
 
 	}
 
