@@ -2,7 +2,7 @@
 	"juror": {
 		"image": "juror.png",
 		"fields": {
-			"name": {"left":5, "top":50, "width": 750},
+			"name": {"left":25, "top":50, "width": 750},
 			"logic": {"left":90, "top":950, "width": 100, "color":"#101010", "format":"{1}"},
 			"sympathy": {"left":330, "top":950, "width": 100, "color":"#101010", "format":"{2}"},
 			"threat": {"left":570, "top":950, "width": 100, "color":"#101010", "format":"{3}"}
@@ -11,7 +11,7 @@
 	"judge": {
 		"image": "judge.png",
 		"fields": {
-			"name": {"left":5, "top":50, "width": 750, "font-size": 34},
+			"name": {"left":25, "top":50, "width": 750, "font-size": 34},
 			"logic": {"left":550, "top":760, "width": 100, "color":"#101010", "format":"{1}", "font-size": 200}
 		},
 		"faders": [
@@ -22,7 +22,7 @@
 	"threat": {
 		"image": "threat.png",
 		"fields": {
-			"name": {"left":5, "top":50, "width": 750, "font-size": 34},
+			"name": {"left":25, "top":50, "width": 750, "font-size": 42},
 			"threat": {"left":680, "top":40, "width": 100, "format":"{1}", "font-size": 70, "text-align": "left"},
 			"data": {"left":100, "top":400, "width": 600, "color":"#101010", "format":"{2}", "font-size": 60}
 		}
@@ -30,14 +30,14 @@
 	"sympathy": {
 		"image": "sympathy.png",
 		"fields": {
-			"name": {"left":5, "top":50, "width": 750, "font-size": 38},
+			"name": {"left":25, "top":50, "width": 750, "font-size": 42},
 			"data": {"left":260, "top":430, "width": 100, "color":"#101010", "format":"{1}", "font-size": 400}
 		}
 	},
 	"logic": {
 		"image": "logic.png",
 		"fields": {
-			"name": {"left":5, "top":50, "width": 750, "font-size": 38},
+			"name": {"left":25, "top":50, "width": 750, "font-size": 42},
 			"data": {"left":270, "top":430, "width": 100, "color":"#101010", "format":"{1}", "font-size": 400}
 		}
 	},

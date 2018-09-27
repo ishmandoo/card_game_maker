@@ -12,10 +12,14 @@
 
 	.icon {
 		position: absolute;
+	}	
+	
+	.portrait {
+		position: absolute;
 	}
 
 	.faded {
-		opacity: 0.5;
+		opacity: 0.3;
 	}
 
 	.deck {
@@ -77,6 +81,8 @@
 		var cardDiv = jQuery('<div/>', {
 		    class: "card"
 		}).appendTo(deckDiv);
+
+		$('<img class="portrait", src="images/' + card.fields.name.replace(/[^0-9a-z]/gi, '').toLowerCase() + '.jpg">').appendTo(cardDiv);
 
 		$('<img class="bg", src="images/' + template.image + '">').appendTo(cardDiv);
 		
