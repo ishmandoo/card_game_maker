@@ -18,7 +18,14 @@
 			{"index": 3, "image": "fist_small.png", "tops":[880, 940, 880, 940, 880, 940, 880, 940, 880, 940], "lefts":[20, 55, 100, 135 ,180, 215, 260, 295, 340, 375, 420]},
 			{"index": 2, "image": "heart_card.png", "tops":[700, 700, 700, 700, 700], "lefts":[20, 105, 190, 275, 360]}
 		]
-	},	
+	},		
+	"witness": {
+		"image": "witness.png",
+		"fields": {
+			"name": {"left":25, "top":50, "width": 750, "font-size": 40},
+			"token": {"left":495, "top":800, "width": 100, "color":"#101010", "format":"{2}", "font-size": 200}
+		}
+	},
 	"witness-logic": {
 		"image": "witness_logic.png",
 		"fields": {
@@ -52,7 +59,7 @@
 		}
 	},
 	"threat-no-text": {
-		"image": "threat.png",
+		"image": "threat_no_text.png",
 		"fields": {
 			"name": {"left":25, "top":50, "width": 750, "font-size": 42},
 			"data": {"left":260, "top":430, "width": 100, "color":"#101010", "format":"{1}", "font-size": 400}
