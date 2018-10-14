@@ -1,55 +1,15 @@
 
-	@font-face {
-	    font-family: 'outage';
-	    src: url('../fonts/Outage.ttf');
-	}
+.deck {
+	width: 500in;
+	margin: 0px;
+	clear: left;
+	overflow: hidden;
+}
 
-	.bg {
-		position: relative;
-	}
 
-	.icon {
-		position: absolute;
-	}	
-	
-	.portrait {
-		position: absolute;
-		left: 0.2in;
-		top: 0.2in;
-	}
-
-	.faded {
-		opacity: 0.3;
-	}
-
-	.deck {
-		width: 25in;
-		margin: 0px;
-		clear: left;
-		overflow: hidden;
-	}
-
-	.card {
-		width: 2.5in;
-		position: relative;
-		float: left;
-	}
-	.card img{
-		width: 100%;
-	}
-
-	.card div {
-		position: absolute;
-	}
-
-	div.name {
-		font-size: 36pt;
-		font-family:"outage";
-		text-align: left;
-	}
-
-	div {
-		font-size: 80pt;
-		font-family:"outage";
-		text-align: center;
-	}
+.card {
+	width: 5in;
+	position: relative;
+    float: left;
+    font-size: 24pt;
+}

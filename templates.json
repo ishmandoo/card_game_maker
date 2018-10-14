@@ -2,10 +2,10 @@
 	"juror": {
 		"image": "juror.png",
 		"fields": {
-			"name": {"left":25, "top":50, "width": 750},
-			"logic": {"left":90, "top":950, "width": 100, "color":"#101010", "format":"{1}"},
-			"sympathy": {"left":330, "top":950, "width": 100, "color":"#101010", "format":"{2}"},
-			"threat": {"left":570, "top":950, "width": 100, "color":"#101010", "format":"{3}"}
+			"name": {"left":"0.5em", "top":"0.95em", "width": "100%", "font-size":"0.95em"},
+			"logic": {"left":"0.6em", "top":"6.2em", "width": "2em", "font-size":"3em", "format":"{1}"},
+			"sympathy": {"left":"2.2em", "top":"6.2em", "width": "2em", "font-size":"3em", "format":"{2}"},
+			"threat": {"left":"3.8em", "top":"6.2em", "width": "2em", "font-size":"3em", "format":"{3}"}
 		}
 	},
 	"judge": {
