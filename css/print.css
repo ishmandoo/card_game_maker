@@ -17,3 +17,7 @@ body {
     float: left;
     font-size: 12pt;
 }
+
+div {
+	border: 1px solid black;
+}
