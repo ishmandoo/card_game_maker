@@ -1,0 +1,21 @@
+
+.deck {
+    width: 5400px;
+    height:3600px;
+	clear: left;
+    overflow: hidden;
+    padding: 200px;
+}
+
+
+.card {
+    width: 800px;
+    margin: 20px;
+	position: relative;
+    float: left;
+    font-size: 30pt;
+}
+
+div {
+	border: 0px solid black;
+}

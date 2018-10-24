@@ -1,0 +1,19 @@
+<html>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/printplay.css">
+	<script
+	src="https://code.jquery.com/jquery-3.3.1.js"
+	integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+	crossorigin="anonymous"></script>
+	<script src="lib/papaparse.js"></script>
+	<script src="lib/html2canvas.js"></script>
+	<script src="lib/makeDecks.js"></script>
+	<script type="text/javascript">
+        makeDecks($('document'), 
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vRBZvWFxYCsz6KK2D2Z5AzMNEoT0JSYpPSOZ3Eoa6G1750OnZToas2hFU0CoHKcM4AwcWo0LbMQZSmy/pub?gid=1704731480&single=true&output=csv", 
+        false);
+	</script>
+	<body>
+		<div id="decks"></div>
+	</body>
+</html>
