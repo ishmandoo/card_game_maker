@@ -1,5 +1,6 @@
 {	
 	"juror": {
+		"portrait": true,
 		"image": "juror.png",
 		"fields": {
 			"name": {"left":"0.5em", "top":"0.95em", "width": "100%", "font-size":"0.95em"},
@@ -9,17 +10,19 @@
 		}
 	},
 	"judge": {
+		"portrait": true,
 		"image": "judge.png",
 		"fields": {
 			"name": {"left":"0.5em", "top":"1.1em", "width": "100%", "font-size":"0.75em"},
 			"logic": {"left":"2.55em", "top":"3.8em", "width": "1em", "color":"#101010", "format":"{1}", "font-size": "4em"}
 		},
 		"faders": [
-			{"index": 3, "image": "fist_small.png", "tops":[17.5, 18.7, 17.5, 18.7, 17.5, 18.7, 17.5, 18.7], "lefts":[0.9, 1.6, 2.6, 3.3, 4.3, 5.0, 6.0, 6.6]},
-			{"index": 2, "image": "heart_card.png", "tops":[14.2, 14.2, 14.2, 14.2, 14.2], "lefts":[0.8, 2.4,4.0,5.6,7.2]}
+			{"index": 3, "width":"1.5em", "image": "fist_small.png", "tops":[17.5, 18.7, 17.5, 18.7, 17.5, 18.7, 17.5, 18.7], "lefts":[0.9, 1.6, 2.6, 3.3, 4.3, 5.0, 6.0, 6.6]},
+			{"index": 2, "width":"1.5em", "image": "sympathy_card.png", "tops":[14.2, 14.2, 14.2, 14.2, 14.2], "lefts":[0.8, 2.4,4.0,5.6,7.2]}
 		]
 	},		
 	"witness": {
+		"portrait": true,
 		"image": "witness.png",
 		"fields": {
 			"name": {"left":"0.5em", "top":"0.95em", "width": "100%", "font-size":"0.95em"},
@@ -28,6 +31,7 @@
 		}
 	},
 	"witness-logic": {
+		"portrait": true,
 		"image": "witness_logic.png",
 		"fields": {
 			"name": {"left":"0.5em", "top":"0.95em", "width": "100%", "font-size":"0.95em"},
@@ -36,6 +40,7 @@
 		}
 	},	
 	"witness-sympathy": {
+		"portrait": true,
 		"image": "witness_sympathy.png",
 		"fields": {
 			"name": {"left":"0.5em", "top":"0.95em", "width": "100%", "font-size":"0.95em"},
@@ -44,6 +49,7 @@
 		}
 	},	
 	"witness-threat": {
+		"portrait": true,
 		"image": "witness_threat.png",
 		"fields": {
 			"name": {"left":"0.5em", "top":"0.95em", "width": "100%", "font-size":"0.95em"},
@@ -52,6 +58,7 @@
 		}
 	},
 	"threat": {
+		"portrait": false,
 		"image": "threat_no_text.png",
 		"fields": {
 			"name": {"left":"0.5em", "top":"0.95em", "width": "100%", "font-size":"0.95em"},
@@ -59,6 +66,7 @@
 		}
 	},
 	"sympathy": {
+		"portrait": false,
 		"image": "sympathy.png",
 		"fields": {
 			"name": {"left":"0.5em", "top":"0.95em", "width": "100%", "font-size":"0.95em"},
@@ -66,6 +74,7 @@
 		}
 	},
 	"logic": {
+		"portrait": false,
 		"image": "logic.png",
 		"fields": {
 			"name": {"left":"0.5em", "top":"0.95em", "width": "100%", "font-size":"0.95em"},
@@ -73,11 +82,16 @@
 		}
 	},
 	"client": {
-		"image": "juror.png",
+		"portrait": true,
+		"image": "client.png",
 		"fields": {
-			"name": {"left":5, "top":5, "width": 225},
-			"data": {"left":5, "top":125, "width": 225, "color":"#101010", "format":"{1}"},
-			"type": {"left":5, "top":320, "width": 225, "format":"{0}"}
-		}
+			"name": {"left":"0.5em", "top":"0.95em", "width": "100%", "font-size":"0.95em"}
+		},
+		"options": [
+			{"index": 1, "l":"logic_card.png", "t": "threat_card.png", "s": "sympathy_card.png","left":"1.6em", "top":"15em", "width":"3.7em"},
+			{"index": 2, "l":"logic_card.png", "t": "threat_card.png", "s": "sympathy_card.png","left":"4.3em", "top":"15em", "width":"3.7em"},
+			{"index": 3, "l":"logic_card.png", "t": "threat_card.png", "s": "sympathy_card.png","left":"7.2em", "top":"15em", "width":"3.7em"},
+			{"index": 4, "l":"logic_card.png", "t": "threat_card.png", "s": "sympathy_card.png","left":"9.9em", "top":"15em", "width":"3.7em"}
+		]
 	}
 }
