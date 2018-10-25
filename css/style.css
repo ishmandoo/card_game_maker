@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'outage';
+    src: url('../fonts/Outage.ttf');
+}
+
+.bg {
+	position: relative;
+}
+
+.icon {
+	position: absolute;
+}	
+
+
+.portrait {
+	position: absolute;
+	left: 1em;
+    top: 1em;
+    width: 80%;
+}
+
+.faded {
+	opacity: 0.3;
+}
+
+.card {
+	width: 2.5in;
+	position: relative;
+    float: left;
+    font-size: 12pt;
+}
+
+img.bg{
+	width: 100%;
+}
+
+
+div.text {
+	font-size: 2em;
+	font-family:"outage";
+	text-align: center;
+}
+
+div.name {
+	font-size: 1em;
+	font-family:"outage";
+	text-align: left;
+}
+
+.card div {
+	position: absolute;
+	font-family:"outage";
+}
