@@ -1,6 +1,6 @@
 
 .deck {
-	width: 500in;
+	width: 100in;
 	margin: 0px;
 	clear: left;
 	overflow: hidden;
@@ -8,8 +8,8 @@
 
 
 .card {
-	width: 5in;
+	width: 10in;
 	position: relative;
     float: left;
-    font-size: 24pt;
+    font-size: 48pt;
 }
