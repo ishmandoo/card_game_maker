@@ -16,7 +16,7 @@
 		"portrait": true,
 		"image": "judge.png",
 		"fields": {
-			"name": {"left":"1.4em", "top":"2em", "width": "100%", "font-size":"0.7em"},
+			"name": {"left":"1.4em", "top":"2.2em", "width": "100%", "font-size":"0.65em"},
 			"logic": {"left":"2.5em", "top":"3.7em", "width": "1em", "color":"#101010", "format":"{1}", "font-size": "4em"},
 			"range": {"left":".75em", "top":"4.4em", "width": "2em", "font-size":"1.25em", "format":"{4}"}
 		},
@@ -29,7 +29,7 @@
 		"portrait": true,
 		"image": "witness.png",
 		"fields": {
-			"name": {"left":"0.5em", "top":"0.95em", "width": "100%", "font-size":"0.95em"},
+			"name": {"left":"1.3em", "top":"1.7em", "width": "100%", "font-size":"0.8em"},
 			"mod": {"left":"0em", "top":"3.8em", "width": "2em", "color":"#101010", "format":"{1}", "font-size": "4em"},
 			"token": {"left":"2.3em", "top":"3.8em", "width": "1em", "color":"#101010", "format":"{2}", "font-size": "4em"}
 		}
@@ -38,7 +38,7 @@
 		"portrait": true,
 		"image": "witness_logic.png",
 		"fields": {
-			"name": {"left":"0.5em", "top":"0.95em", "width": "100%", "font-size":"0.95em"},
+			"name": {"left":"1.3em", "top":"1.7em", "width": "100%", "font-size":"0.8em"},
 			"token": {"left":"2.3em", "top":"3.8em", "width": "1em", "color":"#101010", "format":"{2}", "font-size": "4em"}
 		}
 	},	
@@ -46,7 +46,7 @@
 		"portrait": true,
 		"image": "witness_sympathy.png",
 		"fields": {
-			"name": {"left":"0.5em", "top":"0.95em", "width": "100%", "font-size":"0.95em"},
+			"name": {"left":"1.3em", "top":"1.7em", "width": "100%", "font-size":"0.8em"},
 			"mod": {"left":"0em", "top":"3.8em", "width": "2em", "color":"#101010", "format":"{1}", "font-size": "4em"},
 			"token": {"left":"2.3em", "top":"3.8em", "width": "1em", "color":"#101010", "format":"{2}", "font-size": "4em"}
 		}
@@ -55,7 +55,7 @@
 		"portrait": true,
 		"image": "witness_threat.png",
 		"fields": {
-			"name": {"left":"0.5em", "top":"0.95em", "width": "100%", "font-size":"0.95em"},
+			"name": {"left":"1.3em", "top":"1.7em", "width": "100%", "font-size":"0.8em"},
 			"mod": {"left":"0em", "top":"3.8em", "width": "2em", "color":"#101010", "format":"{1}", "font-size": "4em"},
 			"token": {"left":"2.3em", "top":"3.8em", "width": "1em", "color":"#101010", "format":"{2}", "font-size": "4em"}
 		}
