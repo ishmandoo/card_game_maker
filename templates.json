@@ -36,7 +36,6 @@
 		"image": "witness_logic.png",
 		"fields": {
 			"name": {"left":"0.5em", "top":"0.95em", "width": "100%", "font-size":"0.95em"},
-			"mod": {"left":"0em", "top":"4em", "width": "2em", "color":"#101010", "format":"{1}", "font-size": "4em"},
 			"token": {"left":"2.3em", "top":"4em", "width": "1em", "color":"#101010", "format":"{2}", "font-size": "4em"}
 		}
 	},	
